@@ -16,8 +16,6 @@ public class 김민경 {
         int N = Integer.parseInt(br.readLine());
 
         String[] strings1 = new String[N];
-        String[] strings2 = new String[N];
-        StringTokenizer st; 
         for(int i = 0; i < N; i++) {
             strings1 = br.readLine().split(" ");
             for(int j = 0; j < N; j++) {

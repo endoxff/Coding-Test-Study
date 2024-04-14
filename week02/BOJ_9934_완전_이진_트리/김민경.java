@@ -24,24 +24,18 @@ public class 김민경 {
         int[] inputArr = new int[level + 1];
         // 8
         ArrayList<Integer>[] outputArr = new ArrayList[K + 1];
-        //ArrayList을 담은 배열
+
         for(int i = 0; i <= K; i++) {
             outputArr[i] = new ArrayList<Integer>();
         }
-        //0 1 2 3 4
+ 
         StringTokenizer st = new StringTokenizer(br.readLine()," ");
 
         int index = 1;
         while(st.hasMoreTokens()) {
             inputArr[index++] = Integer.parseInt(st.nextToken());
         }
-        //[]
-        //String str = br.readLine();
-        //String[] arr =  str.split(" ");
-        // for(int i = 1; i <= inputArr.length; i++) {
-        //     inputArr[i] = Integer.parseInt(arr[i]);
-        // }
-
+        
         inorder(inputArr, outputArr, 1, inputArr.length - 1, 1);
 
         for(int i = 1; i <= K; i++) {
