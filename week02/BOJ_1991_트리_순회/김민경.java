@@ -3,7 +3,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class 김민경 {
+public class Main {
 
     static Node root;
     public static void main(String[] args) throws Exception {
