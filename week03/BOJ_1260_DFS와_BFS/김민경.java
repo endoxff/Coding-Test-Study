@@ -9,19 +9,12 @@ public class Main {
     static boolean[] bfs_visited;
 
     static void dfs(int start) {
-        Stack<Integer> stack = new Stack<>();
-
-        stack.push(start);
         dfs_visited[start] = true;
+        System.out.print(start + " ");
 
-       while(!stack.isEmpty()) {
-            int vertex = stack.pop();
-            System.out.print(vertex + " ");
-
-            for (int neighbor : dfs_adj[vertex]) {
-                if (!dfs_visited[neighbor]) {
-                    dfs(neighbor);
-                }
+        for (int neighbor : dfs_adj[start]) {
+            if (!dfs_visited[neighbor]) {
+                dfs(neighbor);
             }
         }
     }
@@ -38,7 +31,8 @@ public class Main {
 
             for (int neighbor : bfs_adj[vertex]) {
                 if (!bfs_visited[neighbor]) {
-                    bfs(neighbor);
+                    queue.offer(neighbor);
+                    bfs_visited[neighbor] = true;
                 }
             }
         }
