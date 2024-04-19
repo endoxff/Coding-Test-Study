@@ -6,16 +6,17 @@ public class Main {
     static boolean[] visited;
     static int count = 0;
 
-    static void dfs(int vc, int v) {
-        visited[vc] = true;
+    static void dfs(int start, int v) {
+        visited[start] = true;
         count++;
         for(int i = 1; i <= v; i++) {
-            if(adj[vc][i] == 1 && visited[i] == false) {
+            if(adj[start][i] == 1 && visited[i] == false) {
                 dfs(i, v);
             }
         }
     }
-    public static void main(String[] args) throws Exception {
+    
+    public static void main(Strzzing[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int v = Integer.parseInt(br.readLine());
