@@ -41,7 +41,6 @@ public class Main {
         for(int i = 0; i < n; i++) {
             for(int j = 0; j < n; j++) {
                 adj[i][j] = 0;
-                visited[i][j] = false;
             }
         }
 
@@ -61,11 +60,7 @@ public class Main {
             }
         }
         System.out.println(count);
-
-        for(int i = 0; i < house.length; i++) {
-            System.out.println(house[i]);
-        }
-
+        
         Arrays.sort(house, 0, count); 
         
         for(int i = 0; i < count; i++) {
