@@ -42,7 +42,7 @@ public class Main {
         }
 
         ArrayList<Integer> list = new ArrayList<>();
-        int town = 0;;
+        int town = 0;
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
@@ -58,8 +58,6 @@ public class Main {
         for (int i = 0; i < list.size(); i++) {
             sb.append(list.get(i)).append("\n");
         }
-
-
 
         System.out.println(town);
         System.out.println(sb);
