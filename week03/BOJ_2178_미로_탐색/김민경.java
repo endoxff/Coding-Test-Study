@@ -15,6 +15,7 @@ public class Main {
     static void bfs(int i, int j) {
         Queue<int[]> queue = new LinkedList<>();
 		queue.offer(new int[] {i, j});
+        visited[i][j] = true;
         
         while(!queue.isEmpty()) {
             int q[] = queue.poll();
