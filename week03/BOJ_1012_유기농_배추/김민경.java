@@ -5,7 +5,7 @@ import java.util.StringTokenizer;
 public class Main {
     static int[][] adj;
     static boolean[][] visited;
-    static int m, n, k;
+    static int m, n;
     static int[] dx = {-1, 1, 0, 0}; //상하
     static int[] dy = {0, 0, -1, 1}; //좌우
 
@@ -36,16 +36,10 @@ public class Main {
             StringTokenizer st = new StringTokenizer(br.readLine());
             m = Integer.parseInt(st.nextToken()); // 가로
             n = Integer.parseInt(st.nextToken()); // 세로
-            k = Integer.parseInt(st.nextToken()); //배추 위치 개수
+            int k = Integer.parseInt(st.nextToken()); //배추 위치 개수
 
             visited = new boolean[m][n];
             adj = new int[m][n];
-
-            for(int i = 0; i < m; i++) {
-                for(int j = 0; j < n; j++) {
-                    adj[i][j] = 0;
-                }
-            }
 
             for(int i = 0; i < k; i++) {
                 st = new StringTokenizer(br.readLine());
