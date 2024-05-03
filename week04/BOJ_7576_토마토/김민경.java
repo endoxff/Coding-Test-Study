@@ -68,19 +68,19 @@ public class Main {
         bfs();
 
         int max = -1;
-        int flag = 0;
+        boolean flag;
         for(int i = 0; i < n; i++) {
             for(int j = 0; j < m; j++) {
                 if(box[i][j] == 0) {
                     max = -1;
-                    flag = 1;
+                    flag = true;
                     break;
                 }
                 if(max < box[i][j]) {
                     max = box[i][j];
                 }
             }
-            if(flag == 1) {
+            if(flag) {
                 break;
             }
         }
