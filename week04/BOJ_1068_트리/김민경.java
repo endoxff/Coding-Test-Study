@@ -32,16 +32,13 @@ public class Main {
         }
 
         StringTokenizer st = new StringTokenizer(br.readLine());
-        int cN = 0;
         for(int i = 0; i < n; i++) {
             tree.add(new ArrayList<Integer>());
             int pN = Integer.parseInt(st.nextToken());
             if(pN == -1) {
-                cN++;
                 continue;
             }
-            tree.get(pN).add(cN);
-            cN++;
+            tree.get(pN).add(i);
         }
         int dN = Integer.parseInt(br.readLine());
         dfs(dN);
