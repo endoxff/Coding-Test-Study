@@ -1,12 +1,10 @@
-package BOJ_10026_적록색약;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class 김민경 {
+public class Main {
     static int n;
     static int red, green, blue, blind;
     static char[][] grid;
@@ -68,7 +66,7 @@ public class 김민경 {
                 }
             }
         }
-        int d = red + green + blue;
+        int count = red + green + blue;
         
         red = 0;
         green = 0;
@@ -89,8 +87,8 @@ public class 김민경 {
                 }
             }
         }
-        int d1 = blind + blue;
+        int bCount = blind + blue;
 
-        System.out.println(d + " " + d1);
+        System.out.println(count + " " + bCount);
     }
 }
