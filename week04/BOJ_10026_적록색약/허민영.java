@@ -13,10 +13,9 @@ public class Main {
     static char[][] ch;
 
     public static void main(String[] args) throws IOException {
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
         n = Integer.parseInt(br.readLine());
-
         ch = new char[n][n];
 
         for (int i = 0; i < n; i++) {
@@ -40,6 +39,7 @@ public class Main {
         }
 
         visited = new boolean[n][n];
+
         int answer2 = 0;
         for (int x = 0; x < n; x++) {
             for (int y = 0; y < n; y++) {
