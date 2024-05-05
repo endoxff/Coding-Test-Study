@@ -29,7 +29,7 @@ public class Main {
 
         int t = Integer.parseInt(br.readLine());
         
-        int[] count = new int[t + 1];
+        int[] count = new int[t];
         int index = 0;
 
         for(int num = 0; num < t; num++) {
