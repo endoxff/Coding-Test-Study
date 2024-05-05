@@ -11,7 +11,6 @@ public class Main {
 	static int[] dx = { -1, 0, 1, 0 };
 	static int[] dy = { 0, 1, 0, -1 };	
 
-	static ArrayList<int[]> list = new ArrayList<int[]>();
 	static Queue<int[]> queue = new LinkedList<>();
 	
 	public static void main(String[] args) throws IOException {
