@@ -62,7 +62,7 @@ public class Main {
 				temp[idx++] = array[l++];
 		}
 		
-		for(int i=0; i<=right; i++) 
+		for(int i=left; i<=right; i++) 
 			array[i] = temp[i];
 	}
  
