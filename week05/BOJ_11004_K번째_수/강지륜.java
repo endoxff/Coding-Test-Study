@@ -36,7 +36,7 @@ public class Main {
 		if (left < right) {
 			int mid = (right + left) / 2;
 			mergeSort(left, mid);
-			mergeSort(mid+1, mid);
+			mergeSort(mid+1, right);
 			merge(left, mid, right);
 		}
 		
