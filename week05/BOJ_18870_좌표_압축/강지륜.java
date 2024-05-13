@@ -34,9 +34,6 @@ public class Main {
 		
 		mergeSort(0, array.length-1);
 		
-		for(int num:array) 
-			set.add(num);
-		
 		for(int num:copyArray) 
 			sb.append(binarySearch(num, 0, array.length-1)).append(" ");
 		
