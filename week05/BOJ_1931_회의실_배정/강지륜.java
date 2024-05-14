@@ -26,11 +26,9 @@ public class Main {
 		
 		int result = 1;
 		int end = array[0][1];
-		System.out.println(array[0][0] + ", " + array[0][1]);
 		
 		for(int i=1; i<N; i++) {
 			if (end <= array[i][0]) {
-				System.out.println(i + ": " + array[i][0] + ", " + array[i][1]);
 				result++;
 				end = array[i][1];
 			}
