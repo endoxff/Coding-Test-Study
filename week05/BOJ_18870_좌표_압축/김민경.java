@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 public class Main {
-        public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         int n = Integer.parseInt(br.readLine());
@@ -28,8 +28,9 @@ public class Main {
                 index++;
             }
         }
-        for(int i=0; i<n; i++)
+        for(int i=0; i<n; i++) {
 			sb.append(hashMap.get(arr[i])+" ");
-            System.out.print(sb);
+        }
+        System.out.print(sb);
     }
 }
