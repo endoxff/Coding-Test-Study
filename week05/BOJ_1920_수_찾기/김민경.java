@@ -18,7 +18,7 @@ public class Main {
         }
         if(start < end) {
             if(n < arr[mid]) {
-                return binary_search(arr, start, mid, n);
+                return binary_search(arr, start, mid - 1, n);
             }
             else {
                 return binary_search(arr, mid + 1, end, n);
