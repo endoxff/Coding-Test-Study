@@ -8,7 +8,7 @@ public class Main {
         b[x][y] = temp; 
     }
 
-    static int solution(char[][] b, int n){
+    static int search(char[][] b, int n){
         int count = 0;
         int max = Integer.MIN_VALUE;
 
@@ -56,13 +56,13 @@ public class Main {
             }
         }
 
-        int max = solution(board, n);
+        int max = Integer.MIN_VALUE;
         int count = 0;
         for(int i = 0; i < n; i++) {
             for(int j = 0; j < n; j++) {
                 if(j != n - 1 && board[i][j] != board[i][j + 1]) {
                     swap(board, i, j, i, j + 1);
-                    count = solution(board, n);
+                    count = search(board, n);
                     swap(board, i, j, i, j + 1);
                 }
 
@@ -70,7 +70,7 @@ public class Main {
                     
                 if(i != n - 1 && board[i][j] != board[i + 1][j]) {
                     swap(board, i, j, i + 1, j);
-                    count = solution(board, n);
+                    count = search(board, n);
                     swap(board, i, j, i + 1, j);
                 }
                 max = max < count ? count : max;
