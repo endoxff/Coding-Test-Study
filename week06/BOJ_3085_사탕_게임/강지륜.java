@@ -52,17 +52,12 @@ public class Main {
 					cnt++;
 				}
 				else {
-					if (cnt == 5)
-						System.out.println(i +", " +j);
-					
 					max = Math.max(cnt, max);
 					start = array[i][j];
 					cnt = 1;
 				}
 			}
 			max = Math.max(cnt, max);
-			if (max ==5)
-				System.out.println(cnt + ",, " + i);
 		}
 		
 		for(int i=0;i<N;i++) {
