@@ -44,11 +44,7 @@ public class Main {
                     System.out.println(-1);
                 } else { //그 외의 경우는 dp가 0이 아닐 때
                     if (dp[n] != 0) {
-                        if (ans == 0) {  //static 변수이기에 ans는 0일 수도 있다.  3의 배수이거나 5의 배수이거나 15의 배수인 경우를 말한다.
-                            System.out.println(dp[n]); //이때는 그냥 dp를 출력한다.
-                        } else {
-                            System.out.println(dp[n]);
-                        }
+                        System.out.println(dp[n]);
                     }
                 }
                 return; //(n - (i * 5)) < 0 이기 때문에 더이상 for문을 진행시키면 안되기 때문에 return
