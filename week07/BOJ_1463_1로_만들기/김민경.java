@@ -7,21 +7,21 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
         int n = Integer.parseInt(br.readLine());
-        int[] arr = new int[n + 1];
+        int[] dp = new int[n + 1];
         
         for(int i = 0; i < n + 1; i++) {
-            arr[i] = 0;
+            dp[i] = 0;
         }
 
         for(int i = 2; i < n + 1; i++) {
-            arr[i] = arr[i - 1] + 1;
+            dp[i] = dp[i - 1] + 1;
             if(i % 2 == 0) {
-                arr[i] = Math.min(arr[i], arr[i / 2] + 1);
+                dp[i] = Math.min(dp[i], dp[i / 2] + 1);
             }
             if(i % 3 == 0) {
-                arr[i] = Math.min(arr[i], arr[i / 3] + 1);
+                dp[i] = Math.min(dp[i], dp[i / 3] + 1);
             }
         }   
-        System.out.println(arr[n]);
+        System.out.println(dp[n]);
     }
 }
