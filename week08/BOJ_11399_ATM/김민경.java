@@ -4,8 +4,8 @@ import java.util.StringTokenizer;
 import java.util.Arrays;
 //p1 = 3분 p2 = 1분 p3 = 4분 p4 = 3분 p5 = 2분
 //정렬 -> 1 2 3 3 4
-//1분(자기 거) -> 1분(전 거) + 2분(자기거) -> 3분(전 거) + 3분(자기 거) -> 6분 (전 거) + 3분(자기 거) + 9분(전 거) + 4분(자기 거)
-// 1 + 3 + 6 + 9 + 13 = 32
+//1분(P1) -> 1분(P1) + 2분(P2) -> 3분(P1 + P2) + 3분(P3) -> 6분 (P1 + P2 + P3) + 3분(P4) + 9분(P1 + P2 + P3 + P4) + 4분(P5)
+//최솟값: 1 + 3 + 6 + 9 + 13 = 32
 public class Main {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
