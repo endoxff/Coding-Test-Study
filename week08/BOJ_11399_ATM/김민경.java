@@ -1,5 +1,3 @@
-package BOJ_11399_ATM;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
@@ -8,7 +6,7 @@ import java.util.Arrays;
 //정렬 -> 1 2 3 3 4
 //1분(자기 거) -> 1분(전 거) + 2분(자기거) -> 3분(전 거) + 3분(자기 거) -> 6분 (전 거) + 3분(자기 거) + 9분(전 거) + 4분(자기 거)
 // 1 + 3 + 6 + 9 + 13 = 32
-public class 김민경 {
+public class Main {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
