@@ -29,8 +29,9 @@ public class Main {
         pq.add(arr[0][1]);
 
         for(int i = 1; i < n; i++) {
-			if(pq.peek() <= arr[i][0]) pq.poll();
-			
+			if(pq.peek() <= arr[i][0]) {
+                pq.poll();
+            }
 			pq.add(arr[i][1]);
 		}
 		
