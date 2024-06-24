@@ -3,7 +3,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 // 가로, 세로, 대각선 
 // 대각선 방향 고려(상향, 하향)
-// 5개를 넘는 경우 고려
+// 5개를 넘는 경우 고려!
 public class Main {
     static int[][] checkerboard;
     static int[][] dx = { { 0, 1, 1 , 1 }, { 0, -1, -1, -1 } };
