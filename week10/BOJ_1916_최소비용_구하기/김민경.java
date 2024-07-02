@@ -1,5 +1,3 @@
-package BOJ_1916_최소비용_구하기;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -21,7 +19,8 @@ class Node implements Comparable<Node>{
         return this.cost - o.cost;
     }
 }
-public class 김민경 {
+
+public class Main {
     static int n, m;
     static ArrayList<Node>[] arr; 
     static int[] dist;
@@ -29,7 +28,7 @@ public class 김민경 {
 
     static void dijkstra(int start) {
         PriorityQueue<Node> pq = new PriorityQueue<>();
-        for(int i = 1; i <= n; i++) {
+        for(int i = 0; i <= n; i++) {
             dist[i] = Integer.MAX_VALUE;
         }
         pq.add(new Node(start,0));
@@ -37,12 +36,11 @@ public class 김민경 {
             
         while(!pq.isEmpty()) {
             Node node = pq.poll();
+            if(visited[node.end]) {
+                continue;
+            }
             visited[node.end] = true;
-            
             for(Node n : arr[node.end]) {
-                if(visited[n.end]) {
-                    continue;
-                }
                 if(dist[n.end] > dist[node.end] + n.cost) {
                     dist[n.end] = dist[node.end] + n.cost;
                     pq.add(new Node(n.end, dist[n.end]));
@@ -50,6 +48,7 @@ public class 김민경 {
             }
         }
     }
+
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
