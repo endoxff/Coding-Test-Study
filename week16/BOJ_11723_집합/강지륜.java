@@ -60,8 +60,6 @@ public class Main {
 	}
 	
 	static void toggle(int x) {
-		System.out.println(x + ":" + list.indexOf(x));
-		
 		if (list.contains(x))
 			list.remove(list.indexOf(x));
 		else
@@ -71,7 +69,7 @@ public class Main {
 	static void all() {
 		list.clear();
 		
-		for(int i=1; i<=2; i++)
+		for(int i=1; i<=20; i++)
 			list.add(i);
 	}
 	
