@@ -104,3 +104,4 @@ class Main {
         min = Math.min(min, peopleSum[4] - peopleSum[0]);
     }
 }
+
